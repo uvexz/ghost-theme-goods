@@ -3,7 +3,7 @@
             {{#if feature_image}}
             <!-- start --><div class="col-12 col-md-6 col-xxl-4">
                 <div class="card card-cover overflow-hidden rounded-4 border-0 mb-4" style="background-image: url('{{img_url feature_image}}'); ">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <div class="d-flex flex-column h-100 p-4 p-sm-5 pb-2 pb-sm-3 text-white text-shadow-1">
                         <h3 class="lh-xs fw-normal text-break"><a href="{{url}}" class="text-white text-decoration-none">{{title}}</a></h3>
                         <ul class="d-flex list-unstyled mt-auto">
                             <li class="me-auto">
@@ -13,7 +13,7 @@
                                 <img src="{{asset 'img/blank.svg'}}" width="32" height="32" class="rounded-circle border border-white bg-white" />
                                 {{/if}}
                             </li>
-                            <li class="d-flex align-items-center">
+                            <li class="md-hide d-flex align-items-center">
                                 <small><i class="bi bi-calendar3"></i> {{date format="YYYY-MM-DD"}}</small>
                             </li>
                             {{#if tags}}
@@ -30,7 +30,7 @@
             {{else}}
             <!-- start --><div class="col-12 col-md-6 col-xxl-4">
                 <div class="card card-cover overflow-hidden rounded-4 border-0 mb-4">
-                    <div class="d-flex flex-column h-100 p-5 pb-3 text-secondary text-shadow-1">
+                    <div class="d-flex flex-column h-100 p-4 p-sm-5 pb-2 pb-sm-3 text-secondary text-shadow-1">
                         <h3 class="lh-xs fw-normal text-break"><a href="{{url}}" class="text-secondary text-decoration-none">{{title}}</a></h3>
                         <ul class="d-flex list-unstyled mt-auto">
                             <li class="me-auto">
@@ -40,7 +40,7 @@
                                 <img src="{{asset 'img/blank.svg'}}" width="32" height="32" class="rounded-circle border border-white bg-white" />
                                 {{/if}}
                             </li>
-                            <li class="d-flex align-items-center">
+                            <li class="md-hide d-flex align-items-center">
                                 <small><i class="bi bi-calendar3"></i> {{date format="YYYY-MM-DD"}}</small>
                             </li>
                             {{#if tags}}
