@@ -32,7 +32,7 @@ The theme comes with Artalk comments, and you must add the following code to `Se
 
 ## Screenshot 
 
-![desktop](https://raw.githubusercontent.com/uvexz/ghost-theme-goods/main/assets/screenshot-desktop.jpg)
+![desktop](https://raw.githubusercontent.com/uvexz/ghost-theme-goods/main/assets/screenshot-desktop.png)
 
 ## Copyright & License
 
