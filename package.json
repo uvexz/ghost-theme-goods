@@ -2,7 +2,7 @@
     "name": "Goods",
     "description": "A lite theme for Ghost",
     "homepage": "https://github.com/ygbhf/ghost-theme-1ite",
-    "version": "0.1.0",
+    "version": "0.0.3",
     "engines": {
         "ghost": "^4.0.0"
     },
