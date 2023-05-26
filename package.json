@@ -1,0 +1,42 @@
+{
+    "name": "Goods",
+    "description": "A lite theme for Ghost",
+    "homepage": "https://github.com/ygbhf/ghost-theme-1ite",
+    "version": "0.1.0",
+    "engines": {
+        "ghost": "^4.0.0"
+    },
+    "license": "MIT",
+    "screenshots": {
+        "desktop": "assets/screenshot-desktop.jpg",
+        "mobile": "assets/screenshot-mobile.jpg"
+    },
+    "author": {
+        "name": "YJK",
+        "email": "uvexz@my.id",
+        "url": "https://yjk.im"
+    },
+    "gpm": {
+        "type": "theme",
+        "categories": [
+            "Minimal",
+            "Simple",
+            "Personal Blogs",
+            "Lite"
+        ]
+    },
+    "keywords": [
+        "ghost",
+        "theme",
+        "ghost-theme"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/ygbhf/ghost-theme-goods.git"
+    },
+    "bugs": "https://github.com/ygbhf/ghost-theme-goods/issues",
+    "contributors": "https://github.com/ygbhf/ghost-theme-goods/graphs/contributors",
+    "config": {
+        "posts_per_page": 5
+    }
+}

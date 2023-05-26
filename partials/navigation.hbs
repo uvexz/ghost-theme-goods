@@ -1,0 +1,5 @@
+                            {{#foreach navigation}}
+                            <li class="nav-item">
+                                <a href="{{url absolute="true"}}" class="nav-link ps-0 py-1 {{#if current}}active{{/if}}">{{label}}</a>
+                            </li>
+                            {{/foreach}}

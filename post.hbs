@@ -1,0 +1,122 @@
+{{!< default}}
+
+{{!-- This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. --}}
+
+{{!-- Everything inside the #post tags pulls data from the page --}}
+
+{{#post}}
+    <style>
+        body {background-color: #F4F4F6;}
+        .content .article{}
+            .content .article img{display:inline-block;max-width:100%;height:auto;padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;margin-bottom:10px}
+            .content .article ul{margin-top:10px;margin-bottom:10px;padding-left:20px;list-style:square}
+            .content .article a,.main .content .article blockquote,.main .content .article code,.main .content .article li,.main .content .article p,.main .content .article ul{color:#4A4A4A}
+            .content .article h5{font-size:15px;font-weight:600;color:#4A4A4A}
+            .content .article h4{font-size:17px;font-weight:600;color:#4A4A4A}
+            .content .article h3{font-size:19px;font-weight:600;color:#4A4A4A}
+            .content .article h2{font-size:21px;font-weight:600;color:#4A4A4A}
+            .content .article h1{font-size:23px;font-weight:600;color:#4A4A4A}
+            .content .article blockquote {padding: 10px 20px; margin: 0 0 20px; border-left: 5px solid #eee;}
+            .content .article blockquote p:last-child {margin-bottom: 0;}
+            .content .article table{width:100%;margin:0 0 10px 0;border:1px solid #ccc;border-collapse:collapse}
+            .content .article table td,table th{border:1px solid #ccc;color:#666;padding:.5em 1em}
+            .content .article table th{font-weight:400;background:#f2f2f2}
+            .content .article pre {background-color: #f3f3f3!important;border-radius: var(--bs-border-radius)!important;}
+            .content .article p code{font-size: 90%; color: #c7254e;}
+    </style>
+    <div class="container">
+        <div class="row d-flex flex-row-reverse">
+            <!-- start --><div class="col-12">
+                <p class="my-3 fw-light"><a href="/" class="text-secondary text-decoration-none"><i class="bi bi-arrow-return-left"></i> Index</a></p>
+            </div><!-- end -->
+            {{#if feature_image}}
+            <!-- start --><div class="col-12 col-lg-4">
+                <div class="card card-cover overflow-hidden rounded-4 border-0 mb-4" style="background-image: url('{{img_url feature_image}}'); ">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="lh-xs fw-normal text-break">{{title}}</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                {{#if primary_author.profile_image}}
+                                <img src="{{img_url primary_author.profile_image}}" width="32" height="32" class="rounded-circle border border-white bg-white" />
+                                {{else}}
+                                <img src="{{asset 'img/blank.svg'}}" width="32" height="32" class="rounded-circle border border-decoration bg-white" />
+                                {{/if}}
+                            </li>
+                            {{#if tags}}
+                            <li class="d-flex align-items-center ms-3 text-uppercase">
+                                <small>
+                                    <i class="bi bi-tags"></i> {{#foreach tags}}<a href="{{url}}" title="{{name}}" class="text-white text-decoration-none">{{name}}</a> {{/foreach}}
+                                </small>
+                            </li>
+                            {{/if}}
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- end -->
+            {{else}}
+            <!-- start --><div class="col-12 col-lg-4">
+                <div class="card card-cover overflow-hidden rounded-4 border-0 mb-4">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-secondary text-shadow-1 bg-white">
+                        <h3 class="lh-xs fw-normal text-break">{{title}}</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                {{#if primary_author.profile_image}}
+                                <img src="{{img_url primary_author.profile_image}}" width="32" height="32" class="rounded-circle border border-white bg-white" />
+                                {{else}}
+                                <img src="{{asset 'img/secondary.svg'}}" width="32" height="32" class="rounded-circle border border-decoration" />
+                                {{/if}}
+                            </li>
+                            {{#if tags}}
+                            <li class="d-flex align-items-center ms-3 text-uppercase">
+                                <small>
+                                    <i class="bi bi-tags text-secondary"></i> {{#foreach tags}}<a href="{{url}}" title="{{name}}" class="text-secondary text-decoration-none">{{name}}</a> {{/foreach}}
+                                </small>
+                            </li>
+                            {{/if}}
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- end -->
+            {{/if}}
+            <!-- start --><div class="col-12 col-lg-8">
+                <div class="card overflow-hidden rounded-4 border-0">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <div class="content">
+                            <div class="article">
+
+                            {{content}}
+
+                            <div class="d-flex justify-content-between text-secondary my-4">
+                                <small>
+                                    <i class="bi bi-calendar3"></i> {{date format="YYYY-MM-DD"}}&nbsp;
+                                    <span class="md-hide"><i class="bi bi-eye"></i> <span id="ArtalkPV">1+</span> Views</span>
+                                </small>
+                                <small>
+                                    <span class="md-hide"><i class="bi bi-pencil-square"></i> <a href="edit" class="text-secondary text-decoration-none">Edit article</a>&nbsp;</span>
+                                    <i class="bi bi-chevron-double-up"></i> <a href="#" class="text-secondary text-decoration-none">Back to top</a>
+                                </small>
+                            </div>
+
+                            <div id="comments"></div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end -->
+            <!-- start --><div class="col-12">
+                <p class="my-3 fw-light"><a href="/" class="text-secondary text-decoration-none"><i class="bi bi-arrow-return-left"></i> Index</a></p>
+            </div><!-- end -->
+        </div>
+    </div>
+
+<link href="https://cdn.jsdelivr.net/combine/gh/highlightjs/cdn-release/build/styles/default.min.css,npm/baguettebox.js@1.11.1/dist/baguetteBox.min.css,npm/artalk@2/dist/ArtalkLite.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/combine/gh/highlightjs/cdn-release/build/highlight.min.js,npm/baguettebox.js@1.11.1/dist/baguetteBox.min.js,npm/artalk@2/dist/ArtalkLite.js"></script>
+<script>
+    hljs.highlightAll();
+
+    window.addEventListener('load', function() {
+        baguetteBox.run('.article');
+    });
+</script>
+
+{{/post}}

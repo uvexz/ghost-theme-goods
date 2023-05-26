@@ -1,0 +1,53 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- start --><div class="col-12 col-md-6 col-xxl-4">
+                <div class="card card-cover overflow-hidden rounded-0 border-0 mb-4 bg-light">
+                    <div class="d-flex flex-column h-100 text-secondary text-shadow-1">
+                        <ul class="nav flex-column">                                        
+                            <li class="nav-item py-1">
+                                Menu
+                            </li>
+
+                            {{navigation}}
+                        </ul>
+                        <h3 class="display-6 lh-1 fw-bold mt-auto">
+                        {{#is "home"}} 
+                            {{@site.title}}
+                        {{else}}
+                            {{#is "tag"}}
+                                {{#tag}}
+                                    <i class="bi bi-tags"></i>&nbsp;{{name}}
+                                {{/tag}}
+                            {{else}}
+                                {{meta_title}}
+                            {{/is}}
+                        {{/is}}
+                        </h3>
+                        <div class="d-flex justify-content-between">
+                            <p class="fw-light text-uppercase pb-0 mb-0 me-auto"><small>
+                                <i class="bi bi-c-circle text-secondary"></i> {{date format="YYYY"}} <a href="{{@site.url}}" class="text-reset text-decoration-none">{{@site.title}}</a>. Powered by <a href="https://github.com/TryGhost/Ghost" target="_blank" class="text-reset text-decoration-none">Ghost</a><span class="md-hide"> with theme <a href="https://github.com/ygbhf/ghost-theme-goods" target="_blank" class="text-reset text-decoration-none">Goods</a></span>.
+                            </small></p>
+                            <p class="fw-light align-self-center pb-0 mb-0"><small>
+                                <a href="{{@site.url}}/ghost/" class="align-self-center"><i class="bi bi-shield-lock text-secondary"></i></a>
+                                <a href="{{@site.url}}/rss/" class="align-self-center"><i class="bi bi-rss text-secondary"></i></a>
+                            </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end -->
+
+            {{!-- The main content area on the homepage --}}
+            {{> "loop"}}
+
+            <!-- start --><div class="col-12 d-flex justify-content-between">
+
+                {{!-- The tag below includes the post loop - partials/loop.hbs --}}
+                {{pagination}}
+
+            </div><!-- end -->
+
+        </div>
+    </div>
