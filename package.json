@@ -1,8 +1,8 @@
 {
-    "name": "Goods",
+    "name": "goods",
     "description": "A lite theme for Ghost",
-    "homepage": "https://github.com/ygbhf/ghost-theme-1ite",
-    "version": "0.0.3",
+    "homepage": "https://github.com/uvexz/ghost-theme-1ite",
+    "version": "0.0.4",
     "engines": {
         "ghost": "^4.0.0"
     },
@@ -32,10 +32,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git://github.com/ygbhf/ghost-theme-goods.git"
+        "url": "git://github.com/uvexz/ghost-theme-goods.git"
     },
-    "bugs": "https://github.com/ygbhf/ghost-theme-goods/issues",
-    "contributors": "https://github.com/ygbhf/ghost-theme-goods/graphs/contributors",
+    "bugs": "https://github.com/uvexz/ghost-theme-goods/issues",
+    "contributors": "https://github.com/uvexz/ghost-theme-goods/graphs/contributors",
     "config": {
         "posts_per_page": 8
     }

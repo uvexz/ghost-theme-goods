@@ -9,7 +9,7 @@
     <style>
         body {background-color: #F4F4F6;}
         .content .article{}
-            .content .article img{display:inline-block;max-width:100%;height:auto;padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;margin-bottom:10px}
+            .content .article img{display:inline-block;max-width:100%;height:auto;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:var(--bs-border-radius)!important;;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;margin-bottom:10px}
             .content .article ul{margin-top:10px;margin-bottom:10px;padding-left:20px;list-style:square}
             .content .article a,.main .content .article blockquote,.main .content .article code,.main .content .article li,.main .content .article p,.main .content .article ul{color:#4A4A4A}
             .content .article h5{font-size:15px;font-weight:600;color:#4A4A4A}
@@ -38,9 +38,9 @@
                         <ul class="d-flex list-unstyled mt-auto">
                             <li class="me-auto">
                                 {{#if primary_author.profile_image}}
-                                <img src="{{img_url primary_author.profile_image}}" width="32" height="32" class="rounded-circle border border-white bg-white" />
+                                <img src="{{img_url primary_author.profile_image}}" width="32" height="32" class="rounded-circle bg-white" />
                                 {{else}}
-                                <img src="{{asset 'img/blank.svg'}}" width="32" height="32" class="rounded-circle border border-decoration bg-white" />
+                                <img src="{{asset 'img/blank.svg'}}" width="32" height="32" class="rounded-circle" />
                                 {{/if}}
                             </li>
                             {{#if tags}}
@@ -62,9 +62,9 @@
                         <ul class="d-flex list-unstyled mt-auto">
                             <li class="me-auto">
                                 {{#if primary_author.profile_image}}
-                                <img src="{{img_url primary_author.profile_image}}" width="32" height="32" class="rounded-circle border border-white bg-white" />
+                                <img src="{{img_url primary_author.profile_image}}" width="32" height="32" class="rounded-circle bg-white" />
                                 {{else}}
-                                <img src="{{asset 'img/secondary.svg'}}" width="32" height="32" class="rounded-circle border border-decoration" />
+                                <img src="{{asset 'img/secondary.svg'}}" width="32" height="32" class="rounded-circle" />
                                 {{/if}}
                             </li>
                             {{#if tags}}
