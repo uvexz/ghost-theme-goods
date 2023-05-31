@@ -1,5 +1,30 @@
-                            {{#foreach navigation}}
-                            <li class="nav-item">
-                                <a href="{{url absolute="true"}}" class="nav-link ps-0 py-1 {{#if current}}active{{/if}}">{{label}}</a>
-                            </li>
-                            {{/foreach}}
+                            <div class="col">
+                                <ul class="nav flex-column">                                        
+                                    <li class="nav-item py-1 text-muted">
+                                        Menu
+                                    </li>
+                                    {{#foreach navigation}}
+                                        <li class="nav-item">
+                                            <a href="{{url absolute="true"}}" class="nav-link ps-0 py-1">{{label}}</a>
+                                        </li>
+                                    {{/foreach}}
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul class="nav flex-column">                                        
+                                    <li class="nav-item py-1 text-muted">
+                                        Recent Tags
+                                    </li>
+                                    {{#get "tags" limit="6"}}
+                                        {{#foreach tags}}
+                                            <li  class="nav-item">
+                                              <a href="{{url}}" class="nav-link ps-0 py-1">{{name}}</a>
+                                            </li>
+                                        {{else}}
+                                            <li class="nav-item ps-0 py-1 text-muted">No tags :(</li>
+                                        {{/foreach}}
+                                    {{/get}}
+                                </ul>
+                            </div>
+
+
